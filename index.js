@@ -14,21 +14,7 @@ function msgHandler(msg) {
         myArray[data] = 1;
     }
 
-    fetch('http://localhost:8080', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "token": "iloveweb",
-            "lines": [data]
-        })
-
-    }).then((res) => {
-        window.close();
-    })
-}
+    
 
 function readFile(file) {
 
