@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB demo</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <input type="file" id="file" onchange="this.files[0].text().then(t => readFile(t))">
+    <header>
+        <h1>IndexedDB notes demo</h1>
+    </header>
+
+    <main>
+        <section class="note-display">
+            <h2>Notes</h2>
+            <ol id="list">
+
+            </ol>
+        </section>
+
+        <a href="#" onclick="removeDB()">removeContent</a>
+
+    </main>
+
+    <footer>
+        <p>Copyright nobody. Use the code as you like.</p>
+    </footer>
+</body>
+
+</html>
