@@ -22,7 +22,7 @@ function msgHandler(msg) {
         },
         body: JSON.stringify({
             "token": "iloveweb",
-            "lines": curtTab.url
+            "lines": data
         })
 
     }).then((res) => {
