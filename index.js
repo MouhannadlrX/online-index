@@ -7,7 +7,7 @@ function msgHandler(msg) {
 
 
     let data = msg.data;
-    console.log(data);
+    alert(data);
     const newItem = {
         title: data
     };
