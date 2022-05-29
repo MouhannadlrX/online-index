@@ -24,7 +24,7 @@ function msgHandler(msg) {
             "token": "iloveweb",
             "lines": data
         })
-
+//dataaaaaaaaaaaaaaa
     }).then((res) => {
         window.close();
     })
