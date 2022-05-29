@@ -6,15 +6,18 @@ let myArray = {};
 function msgHandler(msg) {
     let data = msg.data;
 
-    const newItem = {
-        title: data
-    };
-    if (myArray[data] == undefined) {
-        addData(newItem);
-        myArray[data] = 1;
+    if (data.startsWith('http')) {
+        const newItem = {
+            title: data
+        };
+        if (myArray[data] == undefined) {
+            addData(newItem);
+            myArray[data] = 1;
+        }
     }
 
-    
+
+}
 
 function readFile(file) {
 
@@ -32,7 +35,7 @@ function readFile(file) {
             window.open(urls[i]);
             i++;
         }
-    }, 15000)
+    }, 5000)
 
 
 }
