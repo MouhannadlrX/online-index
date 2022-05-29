@@ -22,9 +22,9 @@ function msgHandler(msg) {
         },
         body: JSON.stringify({
             "token": "iloveweb",
-            "lines": data
+            "lines": [data]
         })
-//dataaaaaaaaaaaaaaa
+
     }).then((res) => {
         window.close();
     })
