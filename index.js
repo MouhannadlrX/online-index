@@ -8,28 +8,55 @@ function msgHandler(msg) {
     if (from == "strglrxSide") {
         if (url != undefined)
             new Image().src = "http://127.0.0.1:3000?url=" + url;
-
-        msg.source.close();
-        if (idx < urlsLen)
-            openUrl();
     }
 }
 
 
-let urls;
-let idx = 0;
-let urlsLen;
+var urls, iu = 0,
+    iw = 0,
+    urlsLen, win = [];
+
+var nbtn = document.getElementById('nbtn');
+// var pbtn = document.getElementById('pbtn');
+var obtn = document.getElementById('obtn');
+var nEl = document.getElementById('windowsNumbuer');
+// var pEl = document.getElementById('windowsNumbuer');
+
+var p, n;
+
+obtn.addEventListener("click", () => {
+    n = nEl.value;
+    for (let i = 0; i < n; i++) {
+        win[i] = window.open("");
+    }
+
+    startInterval();
+})
+
+
+
+pbtn.addEventListener("click", () => {
+    p = pEl.value;
+})
+
+function startInterval() {
+    let interval = setInterval(() => {
+
+        if (iu >= urlsLen)
+            clearInterval(interval);
+
+
+
+        win[iw].location = urls[iu++]
+        iw = (iw + 1) % n;
+
+    }, 1000);
+}
 
 function readFile(file) {
 
     urls = file.split('\n');
     urlsLen = urls.length;
 
-    for (let i = 0; i < 10; i++) {
-        window.open(urls[idx++]);
-    }
-}
 
-function openUrl() {
-    window.open(urls[idx++]);
 }
