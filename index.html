@@ -5,13 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IndexedDB demo</title>
-    <link href="style.css" rel="stylesheet">
+
     <script src="index.js" defer></script>
 </head>
 
 <body>
     <input type="file" id="file" onchange="this.files[0].text().then(t => readFile(t))">
-    
+
+    <input type="number" id="windowsNumbuer">
+    <button id="nbtn">change widnows number</button>
+    <!-- <input type="number" id="windowsPeriod">
+    <button id="pbtn">change widnows period</button> -->
+    <button id="obtn">open</button>
+
 </body>
 
 </html>
