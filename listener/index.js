@@ -1,16 +1,26 @@
-const express=require('express');
-const app=express();
+const express = require('express');
+const app = express();
+const fs = require('fs');
 
+var ourFile = fs.readFileSync("./potential-dom.txt", 'utf8')
+var urls = ourFile.split(/\r?\n/);
 
-app.listen(3000,()=>{
-   
-})
+app.listen(3000, () => {})
 
-app.set('view engine','ejs')
-app.get('*',(req,res)=>{
-    
+app.get('*', (req, res) => {
 
-    console.dir(req.query.url)
-    // res.set('Content-Type', 'text/html')
-    res.render(`closer.ejs`)
+    if (!urls.includes(req.query.url)) {
+
+        fs.appendFile("./potential-dom.txt", req.query.url + "\n", err => {
+            if (err) {
+                console.error(err);
+            }
+
+        })
+
+        urls.push(req.query.url)
+        console.log(req.query.url)
+    }
+
+    res.send(`hikho`)
 })
