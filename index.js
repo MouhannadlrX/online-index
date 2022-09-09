@@ -17,10 +17,10 @@ var urls, iu = 0,
     urlsLen, win = [];
 
 var nbtn = document.getElementById('nbtn');
-// var pbtn = document.getElementById('pbtn');
+
 var obtn = document.getElementById('obtn');
 var nEl = document.getElementById('windowsNumbuer');
-// var pEl = document.getElementById('windowsNumbuer');
+
 
 var p, n;
 
@@ -35,9 +35,7 @@ obtn.addEventListener("click", () => {
 
 
 
-pbtn.addEventListener("click", () => {
-    p = pEl.value;
-})
+
 
 function startInterval() {
     let interval = setInterval(() => {
@@ -50,7 +48,7 @@ function startInterval() {
         win[iw].location = urls[iu++]
         iw = (iw + 1) % n;
 
-    }, 1000);
+    }, 500);
 }
 
 function readFile(file) {
