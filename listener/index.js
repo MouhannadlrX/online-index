@@ -22,5 +22,5 @@ app.get('*', (req, res) => {
         console.log(req.query.url)
     }
 
-    res.send(`hikho`)
+
 })
