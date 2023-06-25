@@ -1,0 +1,415 @@
+#home-body {
+    height: 100%;
+    padding: 2%;
+    background-image: url(pictures/Untitled-1.jpg);
+    /* background-size: cover; */
+    background-position: center;
+    overflow: hidden;
+}
+
+#about {
+    height: 100%;
+    padding: 2%;
+    background-image: url(pictures/bdfbdfbdf.jpg);
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.main-container {
+    height: 90%;
+}
+
+.nav-container {
+    height: 10%;
+    background: #ffa5008a;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.doctor-name {
+    color: white;
+}
+
+
+li {
+    padding-right: 3%;
+}
+
+.table-container {
+    width: 100%;
+}
+
+td {
+    width: 100%;
+    display: flex;
+}
+
+tr.home-table {
+    color: white;
+    width: 100%;
+    display: inline-flex;
+}
+
+/* tr {
+    color: #0e6194;
+    width: 100%;
+    display: inline-flex;
+} */
+
+th.class {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: orange;
+    color: #ffffff;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+th.name {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: orange;
+    color: #ffffff;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+th.id {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: orange;
+    color: #ffffff;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-value {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.name-value {
+    width: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.id-value {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #ffa5008a;
+}
+
+.internet-url {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0e6194;
+}
+
+.student {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.about-main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.about-nav-container {
+    height: 10%;
+    background: #32cd32ab;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    color: #0e6194;
+}
+
+a {
+    color: #ffffff;
+}
+
+/* a:hover {
+    color: #ffa5008a;
+} */
+
+.about-nav {
+    color: white !important;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.about-nav:hover {
+    color: white !important;
+}
+
+h2 {
+    margin-block-start: 0.2em !important;
+    margin-block-end: 0.2em !important;
+    color: #0e6194;
+}
+
+h3 {
+    margin-block-start: 0.2em !important;
+    margin-block-end: 0.2em !important;
+    color: #0e6194;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2:hover {
+    color: #0e6194;
+}
+
+.cars-details {
+    background: #dddddd6e;
+    width: 68%;
+    border-radius: 8px;
+    padding: 0.5%;
+}
+
+.contact-us {
+    background: #dddddd6e;
+    width: 28%;
+    height: 40%;
+    border-radius: 8px;
+    padding: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.const-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forth-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cars-container {
+    background-color: white;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 2%;
+}
+
+.bmw-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.chevorlet-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.ford-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.hyundai-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.infinti-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.kia-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.lexux-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.mercedes-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.rang-rover-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.toyota-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.cars-table-container {
+    height: 70%;
+    padding: 2%;
+}
+
+.cars-table {
+    width: 100%;
+}
+
+tr.cars-table-head {
+    display: flex;
+    width: 100%;
+    color: #0e6194;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+tr.cars-table-head:hover {
+    color: white;
+    background-color: #0e6194b3;
+}
+
+td.table-element {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-button {
+    height: 10%;
+}
+
+.home-button-container {
+    padding: 2%;
+}
+
+a.cars-nav:hover {
+ color: white !important;
+}
+
+.cars-nav-container {
+    height: 10%;
+    background: #0e6194b3;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    width: 25%;
+}
+
+input {
+    width: 70%;
+}
+
+select {
+    width: 70%;
+}
+
+.continue {
+    width: unset;
+}
+
+.ok-button {
+    width: unset;
+}

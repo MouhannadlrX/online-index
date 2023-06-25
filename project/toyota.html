@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>toyota</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="myFunction.js"></script>
+</head>
+
+<body class="toyota-container">
+	<div class="nav-container">
+		<ul class="nav-bar" dir="rtl">
+			<li><a href="home.html">الرئيسية</a></li>
+			<li><a href="aboutUs.html">من نحن</a></li>
+			<li><a href="cars.html">سيارات</a></li>
+
+		</ul>  
+	</div>
+	<h1>
+		<center>سيارة تويوتا</center>
+	</h1>
+	<center><img src="pictures/toyota.jpg" width="500" height="300"></center>
+	<h4>
+		<center>حصلت السيارة الهجينة تويوتا بريوس 2019 على تحديثات لتصبح متوفرة بنسخة دفع كلي للعجلات يحمل اسم AWD-e ،
+			ويعمل هذا النظام على توفير محرك كهربائي إضافي للسيارة من أجل التحكم بالعجلات الخلفية عندما تسير تويوتا بريوس
+			المحدثة بسرعات لا تزيد 69 كم/س ، ويتصل هذا المحرك الكهربائي الإضافي مع بطارية جديدة مصنوعة من مادة النيكل تم
+			وضعها أسفل المقاعد الخلفية .
+
+			اشتملت التجديدات الخارجية التي حصلت عليها هذه السيارة الاقتصادية مصابيح أمامية مجددة وصادمين أمامي وخلفي
+			جديدين ، وأصبح يتوفر على هيكل سيارة بريوس 2019 خيارين جديدين من الألوان الخارجية بدرجات مميزة من الأحمر
+			والأزرق .
+
+			يبدأ سعر تويوتا بريوس 2019 التي ستعمل بنظام دفع كلي للعجلات من 27,300 دولار أمريكي أي ما يعادل 102,375 ريال
+			سعودي ، هذا الثمن أعلى بمقدار 1,400 دولار أمريكي أي ما يعادل 5,250 ريال سعودي عن سعر بريوس 2019 نسخة الدفع
+			الأمامي للعجلات .
+		</center>
+	</h4>
+	<center>
+		<table cellpadding="30" border="border">
+	</center>
+	<tr>
+
+		<th>الإجمالي</th>
+		<th>إعادة الإعمار</th>
+		<th>الضريبة</th>
+		<th>سعر الإيجار اليومي</th>
+
+	</tr>
+	<tr>
+
+		<th>84800</th>
+		<th>800</th>
+		<th>4000</th>
+		<th>80000</th>
+		</table>
+		<input class="continue" type="checkbox" id="myCheckbox"> متابعة
+		<a href='cars.html'>
+			<h2><button>إالغاء</button>
+		</a></h2>
+
+				
+		<form class="hidden" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+			<div class="row">
+			  <label class="required" for="name">الاسم الكامل :</label>
+			  <input id="name" class="input" name="name" type="text" value="" size="30" oninput="validateArabicInput(this)"/><br />
+			  <span id="name_validation" class="error_message"></span>
+			</div>
+			<br />
+
+			<div class="row">
+				<label class="required" for="identity">الرقم الوطني :</label>
+				<input id="identity" class="input" name="identity" type="number" value="" size="30" maxlength ="11" oninput="validateIdentityInput(this)" /><br />
+				<span id="identity_validation" class="error_message"></span>
+			</div>
+			  <br />
+
+			<div class="row">
+				<label class="required" for="birthday">تاريخ الولادة :</label>
+				<input id="birthday" class="input" name="birthday" type="date" value="" size="30" required/><br />
+				<span id="birthday_validation" class="error_message"></span>
+			</div>
+			<br />
+
+			<div class="row">
+				<label class="required" for="mobile">رقم الموبايل :</label>
+				<input id="mobile" class="input" name="mobile" type="text" value="" size="30" pattern="09[0-9][3-9]{7}" oninput="validateMobileInput(this)"/><br />
+				<span id="mobile_validation" class="error_message"></span>
+			</div>
+			  <br />
+
+			<div class="row">
+				<label class="required" for="email">البريد الإلكتروني :</label>
+				<input id="email" class="input" name="email" type="email" value="" size="30" oninput="validateEmailInput(this)" /><br />
+				<span id="email_validation" class="error_message"></span>
+			</div>
+			<br />
+			<div class="row">
+				<label for="rentType">نوع الإيجار:</label>
+				<select name="rentType" id="rentType">
+					<option value=" months">أشهر</option>
+					<option value="weeks">أسابيع</option>
+					<option value="days">أيام</option>
+				</select>
+			</div>
+			  <br />
+			  <br />
+
+			<div class="row">
+			  <label class="required" for="rentCount">الفترة :</label>
+			  <input id="rentCount" class="input" name="rentCount" type="number" value="" size="30" /><br />
+			  <span id="rentCount_validation" class="error_message"></span>
+			</div>
+			<br />
+			<div
+			class="g-recaptcha"
+			data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+		  >
+		  </div>
+			  <input class="ok-button" id="submit_button" type="submit" value="Go" onclick="showTxt()"/>
+		</form>
+		  
+</body>
+
+</html>

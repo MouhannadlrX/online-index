@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>chevrolet</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="myFunction.js"></script>
+
+</head>
+
+<body class="chevorlet-container">
+	<div class="nav-container">
+		<ul class="nav-bar" dir="rtl">
+			<li><a href="home.html">الرئيسية</a></li>
+			<li><a href="aboutUs.html">من نحن</a></li>
+			<li><a href="cars.html">سيارات</a></li>
+
+		</ul>  
+	</div>
+	<h1>
+		<center>سيارة شيفورليه</center>
+	</h1>
+	<center><img src="pictures/chevrolet.jpg" width="500" height="300"></center>
+	<h4>
+		<center>تأتي سيارات شيفروليه بمميزات ترضي جميع الفئات وتناسبها بدرجة كبيرة مع مراعات التطورات الحادثة في عالم
+			السيارات، كما أن لها مقصورة واسعة وكبيرة بسبب التصميم الداخلي للسيارات، كما أن للسيارة قيادة مميزة ومريحة
+			وسلسة بدرجة كبيرة، كما أن السيارة تأتي بمساحة تحميل خلفي كبيرة للغاية في بعض الفئات مقارنتا بباقي سيارات
+			الدفع الرباعي المنافسة لها، وتتميز بتصميم رائع وراقي، وتحتوي على قائمة كبيرة من المميزات التكنولوجية وخصائص
+			الأمان والسلامة</center>
+	</h4>
+	<center>
+		<table cellpadding="30" border="border">
+	</center>
+	<tr>
+
+		<th>الإجمالي</th>
+		<th>إعادة الإعمار</th>
+		<th>الضريبة</th>
+		<th>سعر الإيجار اليومي</th>
+
+	</tr>
+	<tr>
+
+		<th>63600</th>
+		<th>600</th>
+		<th>3000</th>
+		<th>60000</th>
+		</table>
+		<input class="continue" type="checkbox" id="myCheckbox"> متابعة
+		<a href='cars.html'>
+			<h2><button>إالغاء</button>
+		</a></h2>
+
+				
+		<form class="hidden" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+			<div class="row">
+			  <label class="required" for="name">الاسم الكامل :</label>
+			  <input id="name" class="input" name="name" type="text" value="" size="30" oninput="validateArabicInput(this)"/><br />
+			  <span id="name_validation" class="error_message"></span>
+			</div>
+			<br />
+
+			<div class="row">
+				<label class="required" for="identity">الرقم الوطني :</label>
+				<input id="identity" class="input" name="identity" type="number" value="" size="30" maxlength ="11" oninput="validateIdentityInput(this)" /><br />
+				<span id="identity_validation" class="error_message"></span>
+			</div>
+			  <br />
+
+			<div class="row">
+				<label class="required" for="birthday">تاريخ الولادة :</label>
+				<input id="birthday" class="input" name="birthday" type="date" value="" size="30" required/><br />
+				<span id="birthday_validation" class="error_message"></span>
+			</div>
+			<br />
+
+			<div class="row">
+				<label class="required" for="mobile">رقم الموبايل :</label>
+				<input id="mobile" class="input" name="mobile" type="text" value="" size="30" pattern="09[0-9][3-9]{7}" oninput="validateMobileInput(this)"/><br />
+				<span id="mobile_validation" class="error_message"></span>
+			</div>
+			  <br />
+
+			<div class="row">
+				<label class="required" for="email">البريد الإلكتروني :</label>
+				<input id="email" class="input" name="email" type="email" value="" size="30" oninput="validateEmailInput(this)" /><br />
+				<span id="email_validation" class="error_message"></span>
+			</div>
+			<br />
+			<div class="row">
+				<label for="rentType">نوع الإيجار:</label>
+				<select name="rentType" id="rentType">
+					<option value=" months">أشهر</option>
+					<option value="weeks">أسابيع</option>
+					<option value="days">أيام</option>
+				</select>
+			</div>
+			  <br />
+			  <br />
+
+			<div class="row">
+			  <label class="required" for="rentCount">الفترة :</label>
+			  <input id="rentCount" class="input" name="rentCount" type="number" value="" size="30" /><br />
+			  <span id="rentCount_validation" class="error_message"></span>
+			</div>
+			<br />
+			<div
+			class="g-recaptcha"
+			data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+		  >
+		  </div>
+			  <input class="ok-button" id="submit_button" type="submit" value="Go" onclick="showTxt()"/>
+		</form>
+		  
+</body>
+
+</html>
